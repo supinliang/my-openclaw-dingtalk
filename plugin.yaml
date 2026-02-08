@@ -1,0 +1,21 @@
+name: "dingtalk-private-ws-bridge"
+title: "私有钉钉 WS 桥接器"
+version: "1.0.0"
+description: "纯 WebSocket 通信版，无 HTTP 端口依赖，安全可控。"
+author: "YourName"
+entrypoint: "python main.py"
+
+# 这里定义的 Key 必须与钉钉后台一致
+config_schema:
+  DINGTALK_APP_KEY:
+    type: "string"
+    title: "钉钉 App Key"
+    required: true
+  DINGTALK_APP_SECRET:
+    type: "string"
+    title: "钉钉 App Secret"
+    secret: true
+  OPENCLAW_TOKEN:
+    type: "string"
+    title: "OpenClaw Token"
+    secret: true
